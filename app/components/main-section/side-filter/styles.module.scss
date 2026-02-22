@@ -1,0 +1,132 @@
+.filtersPanel {
+  background: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 4px 4px 0 rgba(141, 141, 141, 0.25);
+
+  h3 {
+    margin: 0;
+    padding: 16px 10px 10px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #000000;
+  }
+}
+
+.filterGroups {
+  display: contents;
+}
+
+.filterGroup {
+  border-top: 1px solid #d9d9d9;
+  padding: 12px;
+  &:last-child {
+    border-bottom: none;
+  }
+  &:first-child {
+    border-top: none;
+  }
+}
+
+.filterGroupHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+  gap: 8px;
+
+  h4 {
+    flex: 1;
+    min-width: 0;
+  }
+
+  h4,
+  span {
+    margin: 0;
+    font-size: 14px;
+    line-height: 24px;
+    color: #000000;
+    font-weight: 500;
+  }
+
+  span {
+    flex-shrink: 0;
+  }
+}
+
+.filterOption {
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr) auto;
+  gap: 8px;
+  align-items: center;
+  padding: 10px 0;
+
+  input {
+    width: 16px;
+    height: 16px;
+    accent-color: #5d36af;
+  }
+
+  span,
+  strong {
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+    font-weight: 400;
+  }
+
+  strong {
+    font-weight: 500;
+  }
+}
+
+.timeGroup {
+  border-top: 1px solid #d9d9d9;
+  padding: 12px;
+
+  h4 {
+    margin: 0;
+    font-size: 14px;
+    line-height: 24px;
+    color: #000000;
+    font-weight: 500;
+  }
+
+  p {
+    margin: 10px 0 8px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #2f2f2f;
+  }
+}
+
+.filterActions {
+  border-top: 1px solid #d9d9d9;
+  padding: 14px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.resetBtn {
+  border: none;
+  background: transparent;
+  color: #5630aa;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.applyBtn {
+  border: 1px solid #5d36af;
+  border-radius: 6px;
+  background: #5d36af;
+  color: #fff;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  padding: 10px 14px;
+  cursor: pointer;
+}

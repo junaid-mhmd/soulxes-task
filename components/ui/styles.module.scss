@@ -1,0 +1,299 @@
+.container {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 0 24px;
+}
+
+// input styles
+.inputWrapper {
+	position: relative;
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+
+.inputIcon {
+	position: absolute;
+	left: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	pointer-events: none;
+	z-index: 1;
+	color: #7c8db0;
+}
+
+.input {
+	width: 100%;
+	box-sizing: border-box;
+	border: 1px solid #A1B0CC;
+	border-radius: 4px;
+	background: #ffffff;
+	color: #27273f;
+	font-family: "Segoe UI", sans-serif;
+	padding: 8px 16px;
+	outline: none;
+	transition: border-color 0.2s ease;
+	font-weight: 300 !important;
+	&::placeholder {
+		color: #7c8db0;
+		opacity: 0.7;
+	}
+}
+
+.fieldSizeSm {
+	height: 36px;
+	max-height: 36px;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.fieldSizeMd {
+	height: 48px;
+	max-height: 48px;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.inputWithIcon {
+	padding-left: 48px;
+}
+
+// select styles
+.select {
+	cursor: pointer;
+	appearance: none;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: right 16px center;
+	padding-right: 40px;
+	font-family: "Segoe UI", sans-serif;
+	color: #27273f;
+	background-color: #fff;
+	border: 1px solid #A1B0CC;
+	border-radius: 4px;
+	padding: 8px 16px;
+	&:focus {
+		border-color: #A1B0CC;
+	}
+}
+
+// date range input styles
+.dateRangeContainer {
+	position: relative;
+	width: 100%;
+
+	.input[readonly] {
+		cursor: pointer;
+	}
+}
+
+.dateRangePicker {
+	z-index: 1000;
+	background: #ffffff;
+	border: 1px solid #c8c8c8;
+	border-radius: 4px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	padding: 16px;
+	max-height: min(280px, 50vh);
+	overflow-y: auto;
+	max-width: 307px;
+}
+
+.dateRangePickerContent {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.dateRangePickerField {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.dateRangeLabel {
+	font-size: 14px;
+	font-weight: 500;
+	color: #27273f;
+	font-family: "Segoe UI", sans-serif;
+}
+
+// button styles
+.button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	border: 1px solid #c8c8c8;
+	border-radius: 4px;
+	background-color: #5d36af;
+	color: #27273f;
+	font-family: "Segoe UI", sans-serif;
+	font-weight: 400;
+	padding: 8px 24px;
+	cursor: pointer;
+	outline: none;
+	transition: all 0.2s ease;
+
+	&:hover:not(:disabled) {
+		border-color: #c8c8c8;
+		opacity: 0.9;
+	}
+
+	&:active:not(:disabled) {
+		opacity: 0.8;
+	}
+
+	&:disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
+
+	&:focus-visible {
+		outline: 2px solid #c8c8c8;
+		outline-offset: 2px;
+	}
+}
+
+.button.fieldSizeSm {
+	padding: 8px 16px;
+}
+
+.buttonContent {
+	display: flex;
+	align-items: center;
+}
+
+.buttonLeftIcon,
+.buttonRightIcon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+}
+
+.buttonWithLeftIcon {
+	padding-left: 16px;
+}
+
+.buttonWithRightIcon {
+	padding-right: 16px;
+}
+
+.buttonWithLeftIcon.fieldSizeSm {
+	padding-left: 12px;
+}
+
+.buttonWithRightIcon.fieldSizeSm {
+	padding-right: 12px;
+}
+
+// checkbox
+.checkbox {
+	width: 16px;
+	height: 16px;
+	accent-color: #5d36af;
+	border: 1px solid #6E7491;
+	cursor: pointer;
+	border-radius: 2px;
+}
+
+// range slider
+.rangeSliderWrap {
+	width: 100%;
+	margin-top: 4px;
+}
+
+.rangeSlider {
+	--thumb-size: 12px;
+
+	background: #e0e0e0 !important;
+	border-radius: 999px !important;
+	height: 8px !important;
+
+	:global(.range-slider__range) {
+		background: #5d36af !important;
+		border-radius: 999px;
+	}
+
+	:global(.range-slider__thumb) {
+		width: var(--thumb-size) !important;
+		height: var(--thumb-size) !important;
+		border-radius: 50% !important;
+		background: #ffffff !important;
+		border: 2px solid #5d36af !important;
+		top: 50% !important;
+		transform: translate(-50%, -50%) !important;
+	}
+}
+
+// autocomplete
+.autocompleteWrapper {
+	position: relative;
+	width: 100%;
+}
+
+.autocompleteList {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	margin: 4px 0 0;
+	padding: 0;
+	list-style: none;
+	background: #ffffff;
+	border: 1px solid #c8c8c8;
+	border-radius: 4px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	max-height: 240px;
+	overflow-y: auto;
+	z-index: 10;
+}
+
+.autocompleteItem,
+.autocompleteItemActive {
+	padding: 10px 16px;
+	font-size: 14px;
+	line-height: 1.3;
+	color: #27273f;
+	cursor: pointer;
+}
+
+.autocompleteItemActive {
+	background: #f2eaff;
+	color: #5d36af;
+}
+
+// loading spinner
+.loading {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
+	padding: 24px;
+	height: 100vh;
+}
+
+.loadingSpinner {
+	width: 32px;
+	height: 32px;
+	border: 3px solid #A1B0CC;
+	border-top-color: #5d36af;
+	border-radius: 50%;
+	animation: loadingSpin 0.8s linear infinite;
+}
+
+.loadingText {
+	font-family: "Segoe UI", sans-serif;
+	font-size: 14px;
+	color: #000000;
+	font-weight: 400;
+}
+
+@keyframes loadingSpin {
+	to {
+		transform: rotate(360deg);
+	}
+}

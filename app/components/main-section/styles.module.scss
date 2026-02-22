@@ -1,0 +1,155 @@
+.mainSection {
+  background: #f3f3f3;
+  padding: 32px 0 100px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 245px minmax(0, 1fr) 260px;
+  gap: 32px;
+  align-items: start;
+}
+
+.resultsCol {
+  min-width: 0;
+}
+
+.sortTabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: #ffffff;
+  box-shadow: 0px 4px 4px 0px #8D8D8D40;
+  overflow: hidden;
+
+  button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #8d8d8d;
+    padding: 10px 14px;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .tabIcon {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .tabContent {
+    min-width: 0;
+    color: #000000;
+
+    strong {
+      display: block;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 21px;
+    }
+
+    span {
+      display: block;
+      margin-top: 4px;
+      color: #000000;
+      font-size: 12px;
+    }
+  }
+
+  button svg {
+    color: #0d0d0d;
+  }
+}
+
+.activeTab {
+  border-bottom: 3px solid #5f35b0 !important;
+
+  .tabContent,
+  .tabContent span,
+  svg {
+    color: #5f35b0 !important;
+  }
+}
+
+.cardsStack {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.notFoundCard {
+  background: #fff;
+  box-shadow: 0 4px 4px 0 rgba(141, 141, 141, 0.25);
+  border-radius: 8px;
+  padding: 40px 24px;
+  text-align: center;
+}
+
+.notFoundTitle {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.notFoundText {
+  margin: 0;
+  font-size: 14px;
+  color: #606060;
+  line-height: 1.4;
+}
+
+.notFoundBtn {
+  margin-top: 16px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #fff;
+  background: #5d36af;
+  border: 1px solid #5d36af;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+
+  &:hover {
+    background: #4a2a8f;
+    border-color: #4a2a8f;
+  }
+}
+
+.promoCol {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media (max-width: 1280px) {
+  .grid {
+    grid-template-columns: 245px minmax(0, 1fr);
+  }
+
+  .promoCol {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .promoCol {
+    grid-template-columns: 1fr;
+  }
+
+  .sortTabs {
+    grid-template-columns: 1fr;
+  }
+}

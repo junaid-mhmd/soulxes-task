@@ -1,0 +1,491 @@
+.flightCard {
+  background: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 4px 4px 0 rgba(141, 141, 141, 0.25);
+  padding: 16px;
+}
+
+.infoBar {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 12px 20px;
+  padding-top: 10px;
+  margin-top: 10px;
+  border-top: 1px solid #C8C8C8;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.infoBarItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  line-height: 16px;
+  color: #000000;
+  white-space: nowrap;
+  flex-shrink: 0;
+
+  span {
+    margin: 0;
+  }
+}
+
+.infoBarIcon {
+  flex-shrink: 0;
+  color: #000000;
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+
+  p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+
+    strong {
+      font-weight: 600;
+    }
+  }
+}
+
+.airlineWrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  h4 {
+    margin: 0;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+    color: #000000;
+  }
+
+  svg {
+    color: #64a4ff;
+  }
+}
+
+.cardBody {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 115px;
+  gap: 14px;
+  align-items: center;
+}
+
+.journeyWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.journeyRow {
+  background: #fff1e4;
+  border-radius: 6px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 140px minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+
+  h5 {
+    margin: 2px 0;
+    font-size: 18px;
+    line-height: 24px;
+    color: #171717;
+    font-weight: 600;
+  }
+
+  p {
+    margin: 0;
+    color: #272727;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+  }
+}
+
+.arrivalCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  min-width: 0;
+}
+
+.segmentIconsCol {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+
+.segmentIcons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.segmentIcon {
+  color: #000000;
+  flex-shrink: 0;
+}
+
+.layoverWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.layoverLine {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  margin-top: -1px;
+  border-top: 1px solid #D9D9D9;
+  pointer-events: none;
+}
+
+.layover {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  padding: 0 16px;
+  font-size: 12px;
+  line-height: 10px;
+  color: #000000;
+  text-align: center;
+  background: #ffffff;
+}
+
+.rowDate {
+  margin-bottom: 2px !important;
+  font-size: 14px !important;
+  line-height: 20px !important;
+}
+
+.durationCol {
+  text-align: center;
+
+  h6 {
+    margin: 0;
+    font-size: 17px;
+    line-height: 22px;
+    color: #000000;
+    font-weight: 500;
+  }
+}
+
+.routeLine {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+
+  span {
+    display: block;
+    height: 2px;
+    background: #d3cbc0;
+  }
+
+  svg {
+    color: #bdb7af;
+  }
+}
+
+.priceWrap {
+  text-align: center;
+
+  h3 {
+    margin: 0;
+    font-size: 24px;
+    line-height: 32px;
+    color: #000000;
+    font-weight: 700;
+  }
+
+  button {
+    margin-top: 8px;
+    border: 1px solid #5d36af;
+    border-radius: 6px;
+    background: #5d36af;
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    padding: 8px 14px;
+    width: 100px;
+    cursor: pointer;
+  }
+}
+
+.cardBottom {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+
+  span,
+  a {
+    font-size: 14px;
+    line-height: 22px;
+    color: #202020;
+    text-decoration: none;
+  }
+
+  a,
+  .viewDetailsBtn {
+    color: #45219e;
+    font-weight: 500;
+  }
+}
+
+.viewDetailsBtn {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 14px;
+  line-height: 22px;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: inherit;
+}
+
+.detailsSection {
+  margin-top: 16px;
+  padding-top: 16px;
+}
+
+.detailsTabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 24px;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 16px;
+}
+
+.detailsTab,
+.detailsTabActive {
+  background: none;
+  border: none;
+  padding: 0 10px 12px 10px;
+  margin: 0;
+  font-size: 14px;
+  line-height: 22px;
+  font-family: inherit;
+  color: #000000;
+  cursor: pointer;
+  position: relative;
+}
+
+.detailsTabActive {
+  font-weight: 500;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 2px;
+    background: #45219e;
+  }
+}
+
+.detailsContent {
+  min-height: 60px;
+}
+
+.detailsFlightHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.detailsAirline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 500;
+  color: #000;
+
+  svg {
+    color: #64a4ff;
+    flex-shrink: 0;
+  }
+}
+
+.detailsRoute {
+  font-size: 14px;
+  line-height: 22px;
+  color: #272727;
+}
+
+.detailsJourneyWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  .journeyRowDetails {
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    align-items: center;
+    gap: 8px;
+  }
+  .segmentIconsCol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+}
+
+.detailsPlaceholder {
+  margin: 0;
+  font-size: 14px;
+  line-height: 22px;
+  color: #666;
+}
+
+.warning {
+  color: #fd7e14 !important;
+}
+
+.danger {
+  color: #ef3f55 !important;
+}
+
+@media (max-width: 960px) {
+  .cardTop,
+  .cardBottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cardBody {
+    grid-template-columns: 1fr;
+  }
+
+  .priceWrap {
+    text-align: left;
+  }
+
+  .detailsTabs {
+    gap: 0 16px;
+  }
+
+  .detailsFlightHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .flightCard {
+    padding: 12px;
+  }
+
+  .journeyRow {
+    grid-template-columns: minmax(0, 1fr) 90px minmax(0, 1fr) auto;
+    gap: 8px;
+    padding: 8px;
+
+    h5 {
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    p {
+      font-size: 13px;
+      line-height: 18px;
+    }
+  }
+
+  .durationCol h6 {
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .detailsSection {
+    margin-top: 12px;
+    padding-top: 12px;
+  }
+
+  .detailsTabs {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    gap: 0;
+    margin-bottom: 12px;
+    padding-bottom: 4px;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+      height: 4px;
+    }
+  }
+
+  .detailsTab,
+  .detailsTabActive {
+    flex-shrink: 0;
+    padding: 0 8px 10px 8px;
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .detailsFlightHeader {
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+
+  .detailsAirline,
+  .detailsRoute {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .detailsJourneyWrap {
+    gap: 6px;
+
+    .journeyRowDetails {
+      grid-template-columns: 1fr;
+      gap: 6px;
+    }
+
+    .journeyRow {
+      grid-template-columns: minmax(0, 1fr) 70px minmax(0, 1fr) auto;
+      gap: 6px;
+      padding: 8px;
+    }
+
+    .segmentIconsCol {
+      justify-content: flex-start;
+      padding-left: 0;
+    }
+  }
+
+  .detailsContent {
+    min-height: 40px;
+  }
+
+  .detailsPlaceholder {
+    font-size: 13px;
+    line-height: 20px;
+  }
+}

@@ -1,0 +1,125 @@
+.search {
+	padding: 20px 0;
+	background-color: #ffffff;
+	margin: 20px 0;
+	overflow-x: hidden;
+}
+
+.searchForm {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+	min-width: 0;
+}
+
+.topRow {
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	gap: 8px;
+	align-items: center;
+	justify-content: start;
+}
+
+.fieldWithError {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	min-width: 0;
+}
+
+.fieldError {
+	font-size: 12px;
+	color: #b91c1c;
+	line-height: 1.2;
+}
+
+.topSelect {
+	width: 170px;
+	min-width: 140px;
+	color: #3d4a66;
+	box-sizing: border-box;
+}
+
+.bottomRow {
+	display: grid;
+	grid-template-columns: minmax(0, 1.8fr) minmax(0, 1.2fr) minmax(0, 1fr) auto;
+	gap: 12px;
+	align-items: center;
+	min-width: 0;
+}
+
+.bottomRowLeft {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) 48px minmax(0, 1fr);
+	gap: 8px;
+	align-items: center;
+	min-width: 0;
+}
+
+.bottomField {
+	color: #7284a9;
+	min-width: 0;
+}
+
+.swapButton {
+	width: 48px;
+	height: 48px;
+	min-width: 48px;
+	flex-shrink: 0;
+	padding: 0 !important;
+	justify-content: center;
+	background-color: #f2eaff !important;
+	color: #5d36af !important;
+	border: none !important;
+}
+
+.searchButton {
+	min-width: 0;
+	padding: 8px 16px !important;
+	background-color: #5d36af !important;
+	border-color: #5d36af !important;
+	color: #fff !important;
+}
+
+@media (max-width: 1024px) {
+	.bottomRow {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.searchButton {
+		width: 100%;
+		grid-column: 1 / -1;
+	}
+}
+
+@media (max-width: 768px) {
+	.topRow {
+		grid-template-columns: 1fr;
+	}
+
+	.topSelect {
+		width: 100%;
+		min-width: 0;
+	}
+
+	.bottomRow {
+		grid-template-columns: 1fr;
+		gap: 10px;
+	}
+
+	.bottomRowLeft {
+		grid-template-columns: 1fr 48px 1fr;
+		min-width: 0;
+	}
+}
+
+@media (max-width: 480px) {
+	.bottomRowLeft {
+		grid-template-columns: 1fr 48px 1fr;
+		gap: 6px;
+	}
+
+	.swapButton {
+		height: 48px;
+	}
+}
