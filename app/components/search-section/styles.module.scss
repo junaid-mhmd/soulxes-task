@@ -42,7 +42,9 @@
 
 .bottomRow {
 	display: grid;
-	grid-template-columns: minmax(0, 1.8fr) minmax(0, 1.2fr) minmax(0, 1fr) auto;
+	grid-template-columns:
+		minmax(0, 1.8fr) minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 1fr)
+		auto;
 	gap: 12px;
 	align-items: center;
 	min-width: 0;
@@ -80,7 +82,14 @@
 	border-color: #5d36af !important;
 	color: #fff !important;
 }
-
+.clearButton {
+	padding: 8px 20px;
+	background-color: #fff;
+	color: #5d36af;
+	cursor: pointer;
+	border-color: #5d36af;
+	border-radius: 6px;
+}
 @media (max-width: 1024px) {
 	.bottomRow {
 		grid-template-columns: 1fr 1fr;
